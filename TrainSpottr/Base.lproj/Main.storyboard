@@ -5,10 +5,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
-        <!--Table View Controller-->
+        <!--Rail Line Table View Controller-->
         <scene sceneID="hQm-Fq-aVh">
             <objects>
-                <tableViewController id="LtL-as-PvH" sceneMemberID="viewController">
+                <tableViewController id="LtL-as-PvH" customClass="RailLineTableViewController" customModule="TrainSpottr" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="hue-u1-GG8">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
