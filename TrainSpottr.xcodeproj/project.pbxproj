@@ -11,6 +11,8 @@
 		6447221A1CF7CC8B001B7106 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 644722191CF7CC8B001B7106 /* Assets.xcassets */; };
 		6447221D1CF7CC8B001B7106 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6447221B1CF7CC8B001B7106 /* LaunchScreen.storyboard */; };
 		644722291CF7CCF2001B7106 /* RailLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 644722281CF7CCF2001B7106 /* RailLine.swift */; };
+		6447222B1CF7CD11001B7106 /* RailLineTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6447222A1CF7CD11001B7106 /* RailLineTableViewController.swift */; };
+		6447222D1CF7CDE6001B7106 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6447222C1CF7CDE6001B7106 /* AppDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +22,8 @@
 		6447221C1CF7CC8B001B7106 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6447221E1CF7CC8B001B7106 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		644722281CF7CCF2001B7106 /* RailLine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RailLine.swift; sourceTree = "<group>"; };
+		6447222A1CF7CD11001B7106 /* RailLineTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RailLineTableViewController.swift; sourceTree = "<group>"; };
+		6447222C1CF7CDE6001B7106 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +71,7 @@
 				644722191CF7CC8B001B7106 /* Assets.xcassets */,
 				6447221B1CF7CC8B001B7106 /* LaunchScreen.storyboard */,
 				6447221E1CF7CC8B001B7106 /* Info.plist */,
+				6447222C1CF7CDE6001B7106 /* AppDelegate.swift */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -74,6 +79,7 @@
 		644722251CF7CCAF001B7106 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				6447222A1CF7CD11001B7106 /* RailLineTableViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -164,7 +170,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6447222D1CF7CDE6001B7106 /* AppDelegate.swift in Sources */,
 				644722291CF7CCF2001B7106 /* RailLine.swift in Sources */,
+				6447222B1CF7CD11001B7106 /* RailLineTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
