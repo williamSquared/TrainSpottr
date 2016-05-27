@@ -6,6 +6,7 @@
 //  Copyright © 2016 Will Williams. All rights reserved.
 //
 
+
 import UIKit
 
 class RailLineTableViewController: UITableViewController {
@@ -14,8 +15,8 @@ class RailLineTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        setupView()
+        let url = WMATAService.getRailLines()
+        print("\(url)")
     }
     
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -32,9 +33,5 @@ class RailLineTableViewController: UITableViewController {
         cell.textLabel?.text = "\(indexPath.row)"
         
         return cell
-    }
-    
-    func setupView() {
-        tableView.backgroundColor = UIColor.blueColor()
     }
 }
