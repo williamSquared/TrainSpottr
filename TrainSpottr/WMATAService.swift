@@ -18,6 +18,10 @@ class WMATAService {
     private static let pList = NSBundle.mainBundle().pathForResource("keys", ofType: "plist")
     private static let plistContents = NSDictionary(contentsOfFile: pList!) as! [String: AnyObject]
     
+    /*
+     Input: enum Path
+     Output: WMATA NSURL for use by network calls e.g. NSURLSession
+    */
     private class func wmataURL(path path: Path) -> NSURL {
         
         let url = baseURLString.stringByAppendingString(path.rawValue)
@@ -38,6 +42,10 @@ class WMATAService {
         return components!.URL!
     }
     
+    /*
+     Check WMATA for existing lines. For all existing lines, create a RailLine (model). 
+     Returns a collection of RailLine's
+    */
     class func getRailLines(completion completion: ((result: NSArray?) -> Void)!) {
         let url = wmataURL(path: .RailLines)
         _ = NSURLSession.sharedSession().dataTaskWithURL(url) {(data, response, error) in
