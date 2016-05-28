@@ -10,10 +10,10 @@ import UIKit
 
 class RailLine {
     
-    private var lineCode: String
-    private var displayName: String
-    private var startStationCode: String
-    private var endStationCode: String
+    private(set) var lineCode: String
+    private(set) var displayName: String
+    private(set) var startStationCode: String
+    private(set) var endStationCode: String
     
     init(lineCode: String, displayName: String, startStationCode: String, endStationCode: String) {
         self.lineCode = lineCode

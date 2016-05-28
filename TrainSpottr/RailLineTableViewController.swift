@@ -38,7 +38,7 @@ class RailLineTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier(cellId, forIndexPath: indexPath)
         
-        cell.textLabel?.text = "\(indexPath.row)"
+        cell.textLabel?.text = "\(railLines[indexPath.row].lineCode)"
         
         return cell
     }
