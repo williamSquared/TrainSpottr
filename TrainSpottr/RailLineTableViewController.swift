@@ -12,11 +12,17 @@ import UIKit
 class RailLineTableViewController: UITableViewController {
     
     private let cellId = "cell"
+    private let railLines: [RailLine]? = nil
+    @IBOutlet weak var railLineTableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let url = WMATAService.getRailLines()
-        print("\(url)")
+
+        WMATAService.getRailLines(){ (result) -> Void in
+            if let railLines = result {
+                self.railLineTableView.reloadData()
+            }
+        }
     }
     
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -24,7 +30,11 @@ class RailLineTableViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        if let lines = railLines {
+            return lines.count
+        } else {
+            return 1
+        }
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -34,4 +44,5 @@ class RailLineTableViewController: UITableViewController {
         
         return cell
     }
+    
 }

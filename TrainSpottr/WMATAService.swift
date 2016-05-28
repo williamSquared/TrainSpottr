@@ -38,7 +38,29 @@ class WMATAService {
         return components!.URL!
     }
     
-    class func getRailLines() -> NSURL {
-        return wmataURL(path: .RailLines)
+    class func getRailLines(completion completion: ((result: NSArray?) -> Void)!) {
+        let url = wmataURL(path: .RailLines)
+        _ = NSURLSession.sharedSession().dataTaskWithURL(url) {(data, response, error) in
+            do {
+                if let jsonResult = try NSJSONSerialization.JSONObjectWithData(data!, options: []) as? NSDictionary {
+                    
+                    var railLines: [RailLine] = []
+                    
+                    for (line) in jsonResult["Lines"] as! [AnyObject]{
+                        let lineCode = line["LineCode"]!!.description
+                        let displayName = line["DisplayName"]!!.description
+                        let startStationCode = line["StartStationCode"]!!.description
+                        let endStationCode = line["EndStationCode"]!!.description
+                        
+                        let railLine = RailLine(lineCode: lineCode, displayName: displayName, startStationCode: startStationCode, endStationCode: endStationCode)
+                        
+                        railLines.append(railLine)
+                    }
+                    completion(result: railLines)
+                }
+            } catch let error as NSError {
+                print(error.localizedDescription)
+            }
+        }.resume()
     }
 }

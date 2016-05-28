@@ -45,6 +45,9 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="n0C-7h-ecc"/>
+                    <connections>
+                        <outlet property="railLineTableView" destination="hue-u1-GG8" id="Aaw-JH-dDx"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZWz-Wk-hI4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
