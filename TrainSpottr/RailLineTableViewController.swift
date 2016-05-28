@@ -37,7 +37,7 @@ class RailLineTableViewController: UITableViewController {
     
     // MARK: TableView Methods
     func configureTableViewRows() {
-        tableView.rowHeight = 200
+        tableView.rowHeight = view.frame.height / 6.75
     }
     
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -52,7 +52,7 @@ class RailLineTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCellWithIdentifier(cellId, forIndexPath: indexPath) as! RailLineCell
         
         cell.railLineDisplayName.text = "\(railLines[indexPath.row].displayName)"
-        cell.backgroundColor = UIColor.flatGreenColorDark()
+        cell.backgroundColor = railLines[indexPath.row].getColor()
         return cell
     }
     

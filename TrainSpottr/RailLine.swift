@@ -22,4 +22,23 @@ class RailLine {
         self.endStationCode = endStationCode
     }
     
+    func getColor() -> UIColor {
+        switch displayName {
+        case "Blue":
+            return UIColor.flatSkyBlueColor()
+        case "Green":
+            return UIColor.flatMintColor()
+        case "Orange":
+            return UIColor.flatOrangeColor()
+        case "Red":
+            return UIColor.flatRedColor()
+        case "Silver":
+            return UIColor.flatWhiteColorDark()
+        case "Yellow":
+            return UIColor.flatYellowColor()
+        default:
+            return UIColor.clearColor()
+        }
+    }
+    
 }

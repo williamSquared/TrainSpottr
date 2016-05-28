@@ -15,27 +15,27 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="200" id="bkF-4R-3Bq" customClass="RailLineCell" customModule="TrainSpottr" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="92" width="600" height="200"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="100" id="bkF-4R-3Bq" customClass="RailLineCell" customModule="TrainSpottr" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="92" width="600" height="100"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bkF-4R-3Bq" id="p8E-XH-hmI">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="199"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="99"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rEB-TF-9y0">
-                                            <rect key="frame" x="8" y="16" width="42" height="45"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rEB-TF-9y0">
+                                            <rect key="frame" x="8" y="26" width="584" height="48"/>
+                                            <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="40"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="rEB-TF-9y0" firstAttribute="bottom" secondItem="p8E-XH-hmI" secondAttribute="bottomMargin" id="1hQ-lj-NYU"/>
-                                        <constraint firstItem="rEB-TF-9y0" firstAttribute="leading" secondItem="p8E-XH-hmI" secondAttribute="leadingMargin" id="1km-Bh-3m7"/>
-                                        <constraint firstItem="rEB-TF-9y0" firstAttribute="top" secondItem="p8E-XH-hmI" secondAttribute="topMargin" constant="8" id="fKn-ud-Bxs"/>
+                                        <constraint firstItem="rEB-TF-9y0" firstAttribute="centerY" secondItem="p8E-XH-hmI" secondAttribute="centerY" id="2LU-5Y-pk3"/>
+                                        <constraint firstItem="rEB-TF-9y0" firstAttribute="trailing" secondItem="p8E-XH-hmI" secondAttribute="trailingMargin" id="4B2-Cd-sKG"/>
+                                        <constraint firstItem="rEB-TF-9y0" firstAttribute="leading" secondItem="p8E-XH-hmI" secondAttribute="leadingMargin" id="OOZ-IC-fGe"/>
                                     </constraints>
                                 </tableViewCellContentView>
-                                <color key="backgroundColor" red="0.98624199628829956" green="0.7796865701675415" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.19376453757286072" green="0.50850099325180054" blue="0.85232251882553101" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <outlet property="railLineDisplayName" destination="rEB-TF-9y0" id="eUc-m1-A3m"/>
                                 </connections>
