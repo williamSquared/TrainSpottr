@@ -21,4 +21,5 @@ class RailLine {
         self.startStationCode = startStationCode
         self.endStationCode = endStationCode
     }
+    
 }

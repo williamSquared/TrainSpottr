@@ -6,17 +6,25 @@
 //  Copyright © 2016 Will Williams. All rights reserved.
 //
 
-
 import UIKit
+import ChameleonFramework
 
 class RailLineTableViewController: UITableViewController {
     
+    // MARK: Class Variables
     private let cellId = "cell"
     private var railLines = [RailLine]()
     
+    // MARK: Lifecycle Methods
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        getRailLines()
+        configureTableViewRows()
+    }
+    
+    // MARK: Network Call
+    func getRailLines() {
         WMATAService.getRailLines(){ (result) -> Void in
             if result != nil {
                 self.railLines = result as! [RailLine]
@@ -27,6 +35,11 @@ class RailLineTableViewController: UITableViewController {
         }
     }
     
+    // MARK: TableView Methods
+    func configureTableViewRows() {
+        tableView.rowHeight = 200
+    }
+    
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
     }
@@ -35,11 +48,11 @@ class RailLineTableViewController: UITableViewController {
         return railLines.count
     }
     
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier(cellId, forIndexPath: indexPath)
+    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> RailLineCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier(cellId, forIndexPath: indexPath) as! RailLineCell
         
-        cell.textLabel?.text = "\(railLines[indexPath.row].lineCode)"
-        
+        cell.railLineDisplayName.text = "\(railLines[indexPath.row].displayName)"
+        cell.backgroundColor = UIColor.flatGreenColorDark()
         return cell
     }
     
