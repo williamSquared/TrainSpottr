@@ -6,7 +6,7 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Rail Line Table View Controller-->
+        <!--WMATA Rail Lines-->
         <scene sceneID="hQm-Fq-aVh">
             <objects>
                 <tableViewController id="LtL-as-PvH" customClass="RailLineTableViewController" customModule="TrainSpottr" customModuleProvider="target" sceneMemberID="viewController">
@@ -15,14 +15,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="100" id="bkF-4R-3Bq" customClass="RailLineCell" customModule="TrainSpottr" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="gray" indentationWidth="10" reuseIdentifier="cell" rowHeight="100" id="bkF-4R-3Bq" customClass="RailLineCell" customModule="TrainSpottr" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="92" width="600" height="100"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bkF-4R-3Bq" id="p8E-XH-hmI">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="99"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rEB-TF-9y0">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Blue" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rEB-TF-9y0">
                                             <rect key="frame" x="8" y="26" width="584" height="48"/>
                                             <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="40"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -38,6 +38,7 @@
                                 <color key="backgroundColor" red="0.19376453757286072" green="0.50850099325180054" blue="0.85232251882553101" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <outlet property="railLineDisplayName" destination="rEB-TF-9y0" id="eUc-m1-A3m"/>
+                                    <segue destination="4Ay-2j-RNY" kind="show" identifier="RailStation" id="Plm-Zw-zGG"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -46,11 +47,73 @@
                             <outlet property="delegate" destination="LtL-as-PvH" id="p21-Po-C6l"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="n0C-7h-ecc"/>
+                    <navigationItem key="navigationItem" title="WMATA Rail Lines" id="n0C-7h-ecc"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZWz-Wk-hI4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1042" y="499"/>
+        </scene>
+        <!--WMATA Rail Stations-->
+        <scene sceneID="QQ6-yY-XAA">
+            <objects>
+                <tableViewController id="4Ay-2j-RNY" customClass="RailStationTableViewController" customModule="TrainSpottr" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" sectionHeaderHeight="28" sectionFooterHeight="28" id="JYS-7s-Jjp">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="lhQ-Ld-MYH">
+                                <rect key="frame" x="0.0" y="92" width="600" height="100"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="lhQ-Ld-MYH" id="qeF-sz-CIE">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="99"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="dtP-8x-jxe">
+                                            <rect key="frame" x="8" y="0.0" width="584" height="91"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Tysons Corner" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="klF-4W-1Kj">
+                                                    <rect key="frame" x="0.0" y="0.0" width="203" height="49"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="30"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1943 Chain Bridge Road" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zO9-eq-Lvz">
+                                                    <rect key="frame" x="0.0" y="49" width="186" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="McLean, VA 22102" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Kt-d4-LuX">
+                                                    <rect key="frame" x="0.0" y="70" width="143" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottomMargin" secondItem="dtP-8x-jxe" secondAttribute="bottom" id="0Vh-xK-fKq"/>
+                                        <constraint firstItem="dtP-8x-jxe" firstAttribute="leading" secondItem="qeF-sz-CIE" secondAttribute="leadingMargin" id="3gO-5G-vBg"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="dtP-8x-jxe" secondAttribute="trailing" id="AKN-ZZ-8D4"/>
+                                        <constraint firstItem="dtP-8x-jxe" firstAttribute="top" secondItem="qeF-sz-CIE" secondAttribute="topMargin" constant="-8" id="G6O-uL-vUP"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="4Ay-2j-RNY" id="0r9-F6-LFG"/>
+                            <outlet property="delegate" destination="4Ay-2j-RNY" id="Esp-YN-SVm"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="WMATA Rail Stations" id="TJg-Rv-Ptt">
+                        <barButtonItem key="backBarButtonItem" title="0" id="4df-UA-Exf"/>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="59j-OJ-2pb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1710" y="499"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="eN6-08-8g2">
@@ -60,6 +123,10 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="aov-Mr-qEZ">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" white="1" alpha="0.90160472972972971" colorSpace="calibratedWhite"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>

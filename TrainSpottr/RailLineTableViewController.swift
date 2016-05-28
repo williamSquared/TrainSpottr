@@ -55,5 +55,4 @@ class RailLineTableViewController: UITableViewController {
         cell.backgroundColor = railLines[indexPath.row].getColor()
         return cell
     }
-    
 }
