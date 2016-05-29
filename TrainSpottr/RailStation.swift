@@ -15,12 +15,14 @@ class RailStation {
     private(set) var city: String
     private(set) var state: String
     private(set) var zip: String
+    private(set) var stationCode: String
     
-    init(name: String, street: String, city: String, state: String, zip: String) {
+    init(name: String, street: String, city: String, state: String, zip: String, stationCode: String) {
         self.name = name
         self.street = street
         self.city = city
         self.state = state
         self.zip = zip
+        self.stationCode = stationCode
     }
 }

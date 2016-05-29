@@ -97,8 +97,9 @@ class WMATAService {
                         let city = station["Address"]!!["City"]!!.description
                         let state = station["Address"]!!["State"]!!.description
                         let zip = station["Address"]!!["Zip"]!!.description
+                        let stationCode = station["Code"]!!.description
                         
-                        let railStation = RailStation(name: name, street: street, city: city, state: state, zip: zip)
+                        let railStation = RailStation(name: name, street: street, city: city, state: state, zip: zip, stationCode: stationCode)
                         
                         railStations.append(railStation)
                     }
