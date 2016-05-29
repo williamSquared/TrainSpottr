@@ -14,13 +14,20 @@ class RailStationTableViewController: UITableViewController {
     private let cellId = "cell"
     private var railStations = [RailStation]()
     internal var lineCode: String?
+    internal var color: UIColor?
     
     // MARK: Lifecycle Methods
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        getRailStations(lineCode: lineCode!)
         configureTableViewRows()
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        getRailStations(lineCode: lineCode!)
+        navigationController?.navigationBar.barTintColor = color
+        navigationController!.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName:UIColor.whiteColor()]
+        navigationController!.navigationBar.tintColor = UIColor.whiteColor();
     }
     
     // MARK: Network Call

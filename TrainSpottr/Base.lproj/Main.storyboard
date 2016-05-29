@@ -112,9 +112,7 @@
                             <outlet property="delegate" destination="4Ay-2j-RNY" id="Esp-YN-SVm"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="WMATA Rail Stations" id="TJg-Rv-Ptt">
-                        <barButtonItem key="backBarButtonItem" title="0" id="4df-UA-Exf"/>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="WMATA Rail Stations" id="TJg-Rv-Ptt"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="59j-OJ-2pb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -10,7 +10,7 @@ import Foundation
 
 enum Path: String {
     case RailLines = "jLines/"
-    case RailStations = "jStations/"
+    case RailStations = "jStations"
 }
 
 class WMATAService {
@@ -84,7 +84,7 @@ class WMATAService {
      Returns a collection of RailStation's
      */
     class func getRailStations(lineCode lineCode: String, completion: ((result: NSArray?) -> Void)!) {
-        let url = wmataURL(path: .RailStations, parameters: ["Line_Code": lineCode])
+        let url = wmataURL(path: .RailStations, parameters: ["LineCode": lineCode])
         _ = NSURLSession.sharedSession().dataTaskWithURL(url) {(data, response, error) in
             do {
                 if let jsonResult = try NSJSONSerialization.JSONObjectWithData(data!, options: []) as? NSDictionary {

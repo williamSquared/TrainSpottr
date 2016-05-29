@@ -18,9 +18,14 @@ class RailLineTableViewController: UITableViewController {
     // MARK: Lifecycle Methods
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         getRailLines()
         configureTableViewRows()
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.navigationBar.barTintColor = UIColor.init(red: 255, green: 255, blue: 255, alpha: 0.90)
+        navigationController!.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName:UIColor.blackColor()]
     }
     
     // MARK: Network Call
@@ -61,6 +66,7 @@ class RailLineTableViewController: UITableViewController {
         if (segue.identifier == "RailLineToStation") {
             let railStationTableViewController: RailStationTableViewController = segue.destinationViewController as! RailStationTableViewController
             railStationTableViewController.lineCode = railLines[(tableView.indexPathForSelectedRow?.row)!].getLineCode()
+            railStationTableViewController.color = railLines[(tableView.indexPathForSelectedRow?.row)!].getColor()
         }
     }
 }
