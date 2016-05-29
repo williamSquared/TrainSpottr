@@ -9,15 +9,17 @@
 import UIKit
 
 class RailStationTableViewController: UITableViewController {
+    
     // MARK: Class Variables
     private let cellId = "cell"
     private var railStations = [RailStation]()
+    internal var lineCode: String?
     
     // MARK: Lifecycle Methods
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        getRailStations(lineCode: "SV")
+        getRailStations(lineCode: lineCode!)
         configureTableViewRows()
     }
     

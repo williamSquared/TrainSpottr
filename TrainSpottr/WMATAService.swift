@@ -107,6 +107,6 @@ class WMATAService {
             } catch let error as NSError {
                 print(error.localizedDescription)
             }
-            }.resume()
+        }.resume()
     }
 }

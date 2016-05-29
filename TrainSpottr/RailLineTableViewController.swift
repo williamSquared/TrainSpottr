@@ -55,4 +55,12 @@ class RailLineTableViewController: UITableViewController {
         cell.backgroundColor = railLines[indexPath.row].getColor()
         return cell
     }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if (segue.identifier == "RailLineToStation") {
+            let railStationTableViewController: RailStationTableViewController = segue.destinationViewController as! RailStationTableViewController
+            railStationTableViewController.lineCode = railLines[(tableView.indexPathForSelectedRow?.row)!].getLineCode()
+            print("\(railStationTableViewController.lineCode)")
+        }
+    }
 }

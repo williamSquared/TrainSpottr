@@ -38,7 +38,7 @@
                                 <color key="backgroundColor" red="0.19376453757286072" green="0.50850099325180054" blue="0.85232251882553101" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <outlet property="railLineDisplayName" destination="rEB-TF-9y0" id="eUc-m1-A3m"/>
-                                    <segue destination="4Ay-2j-RNY" kind="show" identifier="RailStation" id="Plm-Zw-zGG"/>
+                                    <segue destination="4Ay-2j-RNY" kind="show" identifier="RailLineToStation" id="Plm-Zw-zGG"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -56,7 +56,7 @@
         <!--WMATA Rail Stations-->
         <scene sceneID="QQ6-yY-XAA">
             <objects>
-                <tableViewController id="4Ay-2j-RNY" customClass="RailStationTableViewController" customModule="TrainSpottr" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="RailStationTableViewController" id="4Ay-2j-RNY" customClass="RailStationTableViewController" customModule="TrainSpottr" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" sectionHeaderHeight="28" sectionFooterHeight="28" id="JYS-7s-Jjp">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

@@ -22,6 +22,10 @@ class RailLine {
         self.endStationCode = endStationCode
     }
     
+    func getLineCode() -> String {
+        return lineCode
+    }
+    
     func getColor() -> UIColor {
         switch displayName {
         case "Blue":
