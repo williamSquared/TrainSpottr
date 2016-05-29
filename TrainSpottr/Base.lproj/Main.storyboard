@@ -47,7 +47,9 @@
                             <outlet property="delegate" destination="LtL-as-PvH" id="p21-Po-C6l"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="WMATA Rail Lines" id="n0C-7h-ecc"/>
+                    <navigationItem key="navigationItem" title="WMATA Rail Lines" id="n0C-7h-ecc">
+                        <barButtonItem key="backBarButtonItem" title=" " id="tOi-HM-BJF"/>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZWz-Wk-hI4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -112,7 +114,9 @@
                             <outlet property="delegate" destination="4Ay-2j-RNY" id="Esp-YN-SVm"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="WMATA Rail Stations" id="TJg-Rv-Ptt"/>
+                    <navigationItem key="navigationItem" title="WMATA Rail Stations" id="TJg-Rv-Ptt">
+                        <barButtonItem key="backBarButtonItem" title=" " id="pXb-bH-JTn"/>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="59j-OJ-2pb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

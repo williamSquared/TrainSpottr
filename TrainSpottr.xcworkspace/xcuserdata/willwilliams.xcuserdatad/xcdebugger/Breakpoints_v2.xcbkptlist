@@ -2,4 +2,54 @@
 <Bucket
    type = "0"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TrainSpottr/WMATAService.swift"
+            timestampString = "486193668.394942"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "19"
+            endingLineNumber = "19"
+            landmarkName = "WMATAService"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "globalinit_33_35E4839DBB50D54C4D22C72716F4945F_func0"
+                  moduleName = "TrainSpottr"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/willwilliams/iOS%20Dev/My%20Projects/TrainSpottr/TrainSpottr/WMATAService.swift"
+                  timestampString = "486193458.677328"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "18"
+                  endingLineNumber = "18"
+                  offsetFromSymbolStart = "29">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TrainSpottr.WMATAService.(baseURLString in _35E4839DBB50D54C4D22C72716F4945F).unsafeMutableAddressor : Swift.String"
+                  moduleName = "TrainSpottr"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/willwilliams/iOS%20Dev/My%20Projects/TrainSpottr/TrainSpottr/WMATAService.swift"
+                  timestampString = "486193458.678688"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "18"
+                  endingLineNumber = "18"
+                  offsetFromSymbolStart = "3">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

@@ -65,8 +65,10 @@ class RailLineTableViewController: UITableViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if (segue.identifier == "RailLineToStation") {
             let railStationTableViewController: RailStationTableViewController = segue.destinationViewController as! RailStationTableViewController
-            railStationTableViewController.lineCode = railLines[(tableView.indexPathForSelectedRow?.row)!].getLineCode()
-            railStationTableViewController.color = railLines[(tableView.indexPathForSelectedRow?.row)!].getColor()
+                        
+            let railLine = railLines[(tableView.indexPathForSelectedRow?.row)!]
+            railStationTableViewController.lineCode = railLine.getLineCode()
+            railStationTableViewController.color = railLine.getColor()
         }
     }
 }
