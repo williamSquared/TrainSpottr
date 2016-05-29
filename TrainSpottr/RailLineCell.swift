@@ -10,6 +10,5 @@ import UIKit
 
 class RailLineCell: UITableViewCell {
     
-    
     @IBOutlet var railLineDisplayName: UILabel!
 }

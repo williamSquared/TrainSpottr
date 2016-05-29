@@ -62,7 +62,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="lhQ-Ld-MYH">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="lhQ-Ld-MYH" customClass="RailStationCell" customModule="TrainSpottr" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="92" width="600" height="100"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="lhQ-Ld-MYH" id="qeF-sz-CIE">
@@ -100,6 +100,11 @@
                                         <constraint firstItem="dtP-8x-jxe" firstAttribute="top" secondItem="qeF-sz-CIE" secondAttribute="topMargin" constant="-8" id="G6O-uL-vUP"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="addressLineOne" destination="zO9-eq-Lvz" id="4Ma-ai-A9S"/>
+                                    <outlet property="addressLineTwo" destination="5Kt-d4-LuX" id="YWr-zb-uji"/>
+                                    <outlet property="stationName" destination="klF-4W-1Kj" id="cAf-Jf-isx"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>

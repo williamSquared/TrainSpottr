@@ -51,8 +51,9 @@ class RailLineTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> RailLineCell {
         let cell = tableView.dequeueReusableCellWithIdentifier(cellId, forIndexPath: indexPath) as! RailLineCell
         
-        cell.railLineDisplayName.text = "\(railLines[indexPath.row].displayName)"
-        cell.backgroundColor = railLines[indexPath.row].getColor()
+        let railLine = railLines[indexPath.row]
+        cell.railLineDisplayName.text = "\(railLine.displayName)"
+        cell.backgroundColor = railLine.getColor()
         return cell
     }
     
@@ -60,7 +61,6 @@ class RailLineTableViewController: UITableViewController {
         if (segue.identifier == "RailLineToStation") {
             let railStationTableViewController: RailStationTableViewController = segue.destinationViewController as! RailStationTableViewController
             railStationTableViewController.lineCode = railLines[(tableView.indexPathForSelectedRow?.row)!].getLineCode()
-            print("\(railStationTableViewController.lineCode)")
         }
     }
 }

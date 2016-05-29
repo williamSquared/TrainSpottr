@@ -31,7 +31,6 @@ class RailStationTableViewController: UITableViewController {
                 dispatch_async(dispatch_get_main_queue()) {
                     self.tableView.reloadData()
                 }
-                print("\(result)")
             }
         }
     }
@@ -50,8 +49,12 @@ class RailStationTableViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier(cellId, forIndexPath: indexPath) 
+        let cell = tableView.dequeueReusableCellWithIdentifier(cellId, forIndexPath: indexPath) as! RailStationCell
         
+        let railStation = railStations[indexPath.row]
+        cell.stationName.text = "\(railStation.name)"
+        cell.addressLineOne.text = "\(railStation.street)"
+        cell.addressLineTwo.text = "\(railStation.city), \(railStation.state) \(railStation.zip)"
         return cell
     }
 }
