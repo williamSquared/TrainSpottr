@@ -12,6 +12,7 @@ class RailStationDetailsViewController: UIViewController, UITableViewDelegate, U
     
     // MARK: Class Variables
     private let cellId = "cell"
+    private var trains = [Train]()
     internal var stationName: String?
     internal var stationCode: String?
     
@@ -22,22 +23,26 @@ class RailStationDetailsViewController: UIViewController, UITableViewDelegate, U
     // MARK: Lifecycle Methods
     override func viewDidLoad() {
         navigationItem.title = "Station Details"
+        railArrivalTableView.dataSource = self
     }
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         configureView()
-        WMATAService.getRailStationDetails(stationCode: stationCode!) { (result) -> Void in
+        getRailStationDetails(stationCode: stationCode!)
+    }
+    
+    // MARK: Network Call
+    private func getRailStationDetails(stationCode stationCode: String){
+        WMATAService.getRailStationDetails(stationCode: stationCode) { (result) -> Void in
             if result != nil {
-//                self.railStations = result as! [RailStation]
+                self.trains = result as! [Train]
                 dispatch_async(dispatch_get_main_queue()) {
-//                    self.railArrivalTableView.reloadData()
+                    self.railArrivalTableView.reloadData()
                 }
             }
         }
     }
-    
-    // MARK: Network Call
     
     // MARK: View Methods
     func configureView() {
@@ -47,11 +52,16 @@ class RailStationDetailsViewController: UIViewController, UITableViewDelegate, U
 
     // MARK: TableView Methods
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 6
+        return self.trains.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier(cellId, forIndexPath: indexPath)
+        
+        let train = self.trains[indexPath.row]
+        cell.textLabel?.text = train.destination
+        cell.detailTextLabel!.text = "\(train.etaInMinutes) minutes"
+        
         return cell
     }
 }

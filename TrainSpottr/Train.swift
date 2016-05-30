@@ -1,5 +1,5 @@
 //
-//  RailStationDetails.swift
+//  Train.swift
 //  TrainSpottr
 //
 //  Created by Will Williams on 5/30/16.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class RailStationDetails {
+class Train {
     
     private(set) var numOfCars: String
     private(set) var destination: String

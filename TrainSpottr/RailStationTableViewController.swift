@@ -31,7 +31,7 @@ class RailStationTableViewController: UITableViewController {
     }
     
     // MARK: Network Call
-    func getRailStations(lineCode lineCode: String) {
+    private func getRailStations(lineCode lineCode: String) {
         WMATAService.getRailStations(lineCode: lineCode){ (result) -> Void in
             if result != nil {
                 self.railStations = result as! [RailStation]

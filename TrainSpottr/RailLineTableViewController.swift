@@ -29,7 +29,7 @@ class RailLineTableViewController: UITableViewController {
     }
     
     // MARK: Network Call
-    func getRailLines() {
+    private func getRailLines() {
         WMATAService.getRailLines(){ (result) -> Void in
             if result != nil {
                 self.railLines = result as! [RailLine]

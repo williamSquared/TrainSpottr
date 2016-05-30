@@ -57,7 +57,7 @@ class WMATAService {
     }
     
     /*
-     Check WMATA for predicted train arrivals. Returns a collection of Arrival Times
+     Check WMATA for predicted train arrivals. Returns a collection of Trains
      */
     class func getRailStationDetails(stationCode stationCode: String, completion: ((result: NSArray?) -> Void)!) {
         var baseUrl = baseURLString
@@ -66,8 +66,7 @@ class WMATAService {
         _ = NSURLSession.sharedSession().dataTaskWithURL(url) {(data, response, error) in
             do {
                 if let jsonResult = try NSJSONSerialization.JSONObjectWithData(data!, options: []) as? NSDictionary {
-                    print("\(jsonResult)")
-                    completion(result: processRailStationDetails(json: jsonResult))
+                    completion(result: processTrainDetails(json: jsonResult))
                 }
             } catch let error as NSError {
                 print(error.localizedDescription)
@@ -146,9 +145,19 @@ class WMATAService {
         return railStations
     }
     
-    private class func processRailStationDetails(json json: NSDictionary) -> NSArray {
-        var station = []
+    private class func processTrainDetails(json json: NSDictionary) -> [Train] {
+        var trains: [Train] = []
         
-        return station
+        for trainDetails in json["Trains"] as! [AnyObject]{
+            let numOfCars = trainDetails["Car"]!!.description
+            let destination = trainDetails["DestinationName"]!!.description
+            let etaInMinutes = trainDetails["Min"]!!.description
+            
+            let train = Train(numOfCars: numOfCars, destination: destination, etaInMinutes: etaInMinutes)
+            
+            trains.append(train)
+        }
+        
+        return trains
     }
 }
