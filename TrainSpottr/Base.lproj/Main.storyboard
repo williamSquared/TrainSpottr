@@ -142,7 +142,7 @@
                                     <constraint firstAttribute="height" constant="241" id="PzH-7x-bRo"/>
                                 </constraints>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" textLabel="yAd-03-ACg" detailTextLabel="Chd-j6-DfA" style="IBUITableViewCellStyleValue1" id="jYb-QJ-Sek" customClass="RailStationDetailsCell" customModule="TrainSpottr" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" textLabel="yAd-03-ACg" detailTextLabel="Chd-j6-DfA" style="IBUITableViewCellStyleValue1" id="jYb-QJ-Sek">
                                         <rect key="frame" x="0.0" y="28" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="jYb-QJ-Sek" id="dGs-7x-zmZ">
@@ -236,6 +236,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Tysons Corner" width="2048" height="1536"/>
+        <image name="Tysons Corner" width="600" height="348"/>
     </resources>
 </document>

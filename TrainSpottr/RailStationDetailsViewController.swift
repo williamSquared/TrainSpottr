@@ -13,6 +13,7 @@ class RailStationDetailsViewController: UIViewController, UITableViewDelegate, U
     // MARK: Class Variables
     private let cellId = "cell"
     private var trains = [Train]()
+    private var refreshControl: UIRefreshControl!
     internal var stationName: String?
     internal var stationCode: String?
     
@@ -24,12 +25,26 @@ class RailStationDetailsViewController: UIViewController, UITableViewDelegate, U
     override func viewDidLoad() {
         navigationItem.title = "Station Details"
         railArrivalTableView.dataSource = self
+        
+        addRefreshControl()
     }
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         configureView()
         getRailStationDetails(stationCode: stationCode!)
+    }
+    
+    // MARK: View Methods
+    func configureView() {
+        stationImage.image = UIImage(named: stationName!)
+    }
+    
+    func addRefreshControl() {
+        refreshControl = UIRefreshControl()
+        refreshControl.attributedTitle = NSAttributedString(string: "Pull to refresh")
+        refreshControl.addTarget(self, action: #selector(RailStationDetailsViewController.refresh), forControlEvents: .ValueChanged)
+        railArrivalTableView.addSubview(refreshControl)
     }
     
     // MARK: Network Call
@@ -42,11 +57,6 @@ class RailStationDetailsViewController: UIViewController, UITableViewDelegate, U
                 }
             }
         }
-    }
-    
-    // MARK: View Methods
-    func configureView() {
-        stationImage.image = UIImage(named: stationName!)
     }
 
     // MARK: TableView Methods
@@ -62,6 +72,11 @@ class RailStationDetailsViewController: UIViewController, UITableViewDelegate, U
         cell.detailTextLabel!.text = handleMinutes(eta: train.etaInMinutes)
         
         return cell
+    }
+    
+    func refresh() {
+        getRailStationDetails(stationCode: stationCode!)
+        refreshControl.endRefreshing()
     }
     
     private func handleMinutes(eta eta: String) -> String {
