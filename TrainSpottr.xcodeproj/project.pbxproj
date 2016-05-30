@@ -8,17 +8,21 @@
 
 /* Begin PBXBuildFile section */
 		644722181CF7CC8B001B7106 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 644722161CF7CC8B001B7106 /* Main.storyboard */; };
-		6447221A1CF7CC8B001B7106 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 644722191CF7CC8B001B7106 /* Assets.xcassets */; };
-		6447221D1CF7CC8B001B7106 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6447221B1CF7CC8B001B7106 /* LaunchScreen.storyboard */; };
 		644722291CF7CCF2001B7106 /* RailLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 644722281CF7CCF2001B7106 /* RailLine.swift */; };
 		6447222B1CF7CD11001B7106 /* RailLineTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6447222A1CF7CD11001B7106 /* RailLineTableViewController.swift */; };
-		6447222D1CF7CDE6001B7106 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6447222C1CF7CDE6001B7106 /* AppDelegate.swift */; };
 		64B0136E1CF7E1D70095D1BE /* WMATAService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64B0136D1CF7E1D70095D1BE /* WMATAService.swift */; };
-		64B013701CF7F1450095D1BE /* keys.plist in Resources */ = {isa = PBXBuildFile; fileRef = 64B0136F1CF7F1450095D1BE /* keys.plist */; };
 		64B013721CFA03360095D1BE /* RailLineCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64B013711CFA03360095D1BE /* RailLineCell.swift */; };
 		64D075571CFA5C3E0036875F /* RailStationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D075561CFA5C3E0036875F /* RailStationTableViewController.swift */; };
 		64D075591CFA5CF80036875F /* RailStation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D075581CFA5CF80036875F /* RailStation.swift */; };
 		64D0755B1CFA76E70036875F /* RailStationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D0755A1CFA76E70036875F /* RailStationCell.swift */; };
+		64D0755D1CFBFBDD0036875F /* RailStationDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D0755C1CFBFBDD0036875F /* RailStationDetailsViewController.swift */; };
+		64D0755F1CFBFC100036875F /* RailStationDetailsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D0755E1CFBFC100036875F /* RailStationDetailsCell.swift */; };
+		64D075611CFBFCCE0036875F /* RailStationDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D075601CFBFCCE0036875F /* RailStationDetails.swift */; };
+		64D075671CFC78530036875F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D075621CFC78530036875F /* AppDelegate.swift */; };
+		64D075681CFC78530036875F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 64D075631CFC78530036875F /* Assets.xcassets */; };
+		64D075691CFC78530036875F /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 64D075641CFC78530036875F /* Info.plist */; };
+		64D0756A1CFC78530036875F /* keys.plist in Resources */ = {isa = PBXBuildFile; fileRef = 64D075651CFC78530036875F /* keys.plist */; };
+		64D0756B1CFC78530036875F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 64D075661CFC78530036875F /* LaunchScreen.storyboard */; };
 		9FE185CB0226DC867DF48727 /* Pods_TrainSpottr.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33D19565DE4233FD70A9D719 /* Pods_TrainSpottr.framework */; };
 /* End PBXBuildFile section */
 
@@ -27,18 +31,21 @@
 		33D19565DE4233FD70A9D719 /* Pods_TrainSpottr.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TrainSpottr.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6447220F1CF7CC8B001B7106 /* TrainSpottr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrainSpottr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		644722171CF7CC8B001B7106 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		644722191CF7CC8B001B7106 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		6447221C1CF7CC8B001B7106 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		6447221E1CF7CC8B001B7106 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		644722281CF7CCF2001B7106 /* RailLine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RailLine.swift; sourceTree = "<group>"; };
 		6447222A1CF7CD11001B7106 /* RailLineTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RailLineTableViewController.swift; sourceTree = "<group>"; };
-		6447222C1CF7CDE6001B7106 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		64B0136D1CF7E1D70095D1BE /* WMATAService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WMATAService.swift; sourceTree = "<group>"; };
-		64B0136F1CF7F1450095D1BE /* keys.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = keys.plist; sourceTree = "<group>"; };
 		64B013711CFA03360095D1BE /* RailLineCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RailLineCell.swift; sourceTree = "<group>"; };
 		64D075561CFA5C3E0036875F /* RailStationTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RailStationTableViewController.swift; sourceTree = "<group>"; };
 		64D075581CFA5CF80036875F /* RailStation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RailStation.swift; sourceTree = "<group>"; };
 		64D0755A1CFA76E70036875F /* RailStationCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RailStationCell.swift; sourceTree = "<group>"; };
+		64D0755C1CFBFBDD0036875F /* RailStationDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RailStationDetailsViewController.swift; sourceTree = "<group>"; };
+		64D0755E1CFBFC100036875F /* RailStationDetailsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RailStationDetailsCell.swift; sourceTree = "<group>"; };
+		64D075601CFBFCCE0036875F /* RailStationDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RailStationDetails.swift; sourceTree = "<group>"; };
+		64D075621CFC78530036875F /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		64D075631CFC78530036875F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		64D075641CFC78530036875F /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		64D075651CFC78530036875F /* keys.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = keys.plist; sourceTree = "<group>"; };
+		64D075661CFC78530036875F /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7B88B53DA5EF433DEC257EA8 /* Pods-TrainSpottr.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TrainSpottr.release.xcconfig"; path = "Pods/Target Support Files/Pods-TrainSpottr/Pods-TrainSpottr.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -89,21 +96,9 @@
 				644722271CF7CCB8001B7106 /* Model */,
 				644722261CF7CCB5001B7106 /* View */,
 				644722251CF7CCAF001B7106 /* Controller */,
-				644722241CF7CCA6001B7106 /* Supporting Files */,
+				64D0756C1CFC78750036875F /* Supporting Files */,
 			);
 			path = TrainSpottr;
-			sourceTree = "<group>";
-		};
-		644722241CF7CCA6001B7106 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				644722191CF7CC8B001B7106 /* Assets.xcassets */,
-				6447221B1CF7CC8B001B7106 /* LaunchScreen.storyboard */,
-				6447221E1CF7CC8B001B7106 /* Info.plist */,
-				6447222C1CF7CDE6001B7106 /* AppDelegate.swift */,
-				64B0136F1CF7F1450095D1BE /* keys.plist */,
-			);
-			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		644722251CF7CCAF001B7106 /* Controller */ = {
@@ -111,6 +106,7 @@
 			children = (
 				6447222A1CF7CD11001B7106 /* RailLineTableViewController.swift */,
 				64D075561CFA5C3E0036875F /* RailStationTableViewController.swift */,
+				64D0755C1CFBFBDD0036875F /* RailStationDetailsViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -120,6 +116,7 @@
 			children = (
 				64B013711CFA03360095D1BE /* RailLineCell.swift */,
 				64D0755A1CFA76E70036875F /* RailStationCell.swift */,
+				64D0755E1CFBFC100036875F /* RailStationDetailsCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -129,6 +126,7 @@
 			children = (
 				644722281CF7CCF2001B7106 /* RailLine.swift */,
 				64D075581CFA5CF80036875F /* RailStation.swift */,
+				64D075601CFBFCCE0036875F /* RailStationDetails.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -139,6 +137,18 @@
 				64B0136D1CF7E1D70095D1BE /* WMATAService.swift */,
 			);
 			name = Networking;
+			sourceTree = "<group>";
+		};
+		64D0756C1CFC78750036875F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				64D075621CFC78530036875F /* AppDelegate.swift */,
+				64D075631CFC78530036875F /* Assets.xcassets */,
+				64D075641CFC78530036875F /* Info.plist */,
+				64D075651CFC78530036875F /* keys.plist */,
+				64D075661CFC78530036875F /* LaunchScreen.storyboard */,
+			);
+			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		DF61BC782097B01D3F272B00 /* Frameworks */ = {
@@ -211,10 +221,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				64B013701CF7F1450095D1BE /* keys.plist in Resources */,
-				6447221D1CF7CC8B001B7106 /* LaunchScreen.storyboard in Resources */,
-				6447221A1CF7CC8B001B7106 /* Assets.xcassets in Resources */,
+				64D0756A1CFC78530036875F /* keys.plist in Resources */,
+				64D075681CFC78530036875F /* Assets.xcassets in Resources */,
 				644722181CF7CC8B001B7106 /* Main.storyboard in Resources */,
+				64D0756B1CFC78530036875F /* LaunchScreen.storyboard in Resources */,
+				64D075691CFC78530036875F /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -275,12 +286,15 @@
 			files = (
 				64B0136E1CF7E1D70095D1BE /* WMATAService.swift in Sources */,
 				64B013721CFA03360095D1BE /* RailLineCell.swift in Sources */,
+				64D075671CFC78530036875F /* AppDelegate.swift in Sources */,
+				64D0755D1CFBFBDD0036875F /* RailStationDetailsViewController.swift in Sources */,
+				64D0755F1CFBFC100036875F /* RailStationDetailsCell.swift in Sources */,
 				64D0755B1CFA76E70036875F /* RailStationCell.swift in Sources */,
-				6447222D1CF7CDE6001B7106 /* AppDelegate.swift in Sources */,
 				644722291CF7CCF2001B7106 /* RailLine.swift in Sources */,
 				64D075571CFA5C3E0036875F /* RailStationTableViewController.swift in Sources */,
 				64D075591CFA5CF80036875F /* RailStation.swift in Sources */,
 				6447222B1CF7CD11001B7106 /* RailLineTableViewController.swift in Sources */,
+				64D075611CFBFCCE0036875F /* RailStationDetails.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -293,14 +307,6 @@
 				644722171CF7CC8B001B7106 /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		6447221B1CF7CC8B001B7106 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				6447221C1CF7CC8B001B7106 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
