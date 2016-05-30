@@ -136,10 +136,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="aM6-Rr-jEG">
-                                <rect key="frame" x="0.0" y="359" width="600" height="241"/>
+                                <rect key="frame" x="0.0" y="359" width="600" height="350"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="241" id="PzH-7x-bRo"/>
+                                    <constraint firstAttribute="height" constant="350" id="PzH-7x-bRo"/>
                                 </constraints>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" textLabel="yAd-03-ACg" detailTextLabel="Chd-j6-DfA" style="IBUITableViewCellStyleValue1" id="jYb-QJ-Sek">
@@ -174,8 +174,8 @@
                                     <constraint firstAttribute="height" constant="239" id="AU1-Lz-Gwd"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Destination | ETA" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pki-Z4-uGt">
-                                <rect key="frame" x="20" y="311" width="231" height="36"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Destination" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pki-Z4-uGt">
+                                <rect key="frame" x="20" y="311" width="156" height="36"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="30"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -184,6 +184,12 @@
                                 <rect key="frame" x="0.0" y="354" width="600" height="2"/>
                                 <color key="backgroundColor" red="0.90823972225189209" green="0.92638683319091797" blue="0.9317171573638916" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ETA" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fBY-Ik-fdN">
+                                <rect key="frame" x="527" y="311" width="53" height="36"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="30"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -194,8 +200,10 @@
                             <constraint firstItem="J3L-Gv-kgg" firstAttribute="trailing" secondItem="8CF-Nq-K9X" secondAttribute="trailing" id="8Xv-oh-HcN"/>
                             <constraint firstItem="aM6-Rr-jEG" firstAttribute="top" secondItem="J3L-Gv-kgg" secondAttribute="bottom" constant="56" id="FCB-ri-QP8"/>
                             <constraint firstAttribute="trailing" secondItem="J3L-Gv-kgg" secondAttribute="trailing" id="RQC-a7-2YI"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="fBY-Ik-fdN" secondAttribute="trailing" id="TCS-kF-cXY"/>
                             <constraint firstItem="J3L-Gv-kgg" firstAttribute="leading" secondItem="8CF-Nq-K9X" secondAttribute="leading" id="WMc-yK-gXi"/>
                             <constraint firstItem="J3L-Gv-kgg" firstAttribute="top" secondItem="iCY-8f-aF1" secondAttribute="bottom" id="XPP-vF-01Y"/>
+                            <constraint firstItem="fBY-Ik-fdN" firstAttribute="top" secondItem="J3L-Gv-kgg" secondAttribute="bottom" constant="8" id="keu-nC-EZj"/>
                             <constraint firstItem="8CF-Nq-K9X" firstAttribute="top" secondItem="Pki-Z4-uGt" secondAttribute="bottom" constant="7" id="rBO-nD-A98"/>
                             <constraint firstItem="8CF-Nq-K9X" firstAttribute="trailing" secondItem="aM6-Rr-jEG" secondAttribute="trailing" id="tXV-QZ-fzJ"/>
                             <constraint firstItem="Pki-Z4-uGt" firstAttribute="leading" secondItem="IKe-ak-LhO" secondAttribute="leadingMargin" id="xOc-l7-uu9"/>
@@ -204,6 +212,7 @@
                     <toolbarItems/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="imageViewHeightConstraint" destination="AU1-Lz-Gwd" id="3a8-ig-Y6E"/>
                         <outlet property="railArrivalTableView" destination="aM6-Rr-jEG" id="xVx-Zs-nm3"/>
                         <outlet property="stationImage" destination="J3L-Gv-kgg" id="23O-3E-Ryf"/>
                     </connections>

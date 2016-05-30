@@ -18,6 +18,7 @@ class RailStationDetailsViewController: UIViewController, UITableViewDelegate, U
     internal var stationCode: String?
     
     // MARK: Outlet Connections
+    @IBOutlet var imageViewHeightConstraint: NSLayoutConstraint!
     @IBOutlet var railArrivalTableView: UITableView!
     @IBOutlet var stationImage: UIImageView!
     
@@ -31,13 +32,22 @@ class RailStationDetailsViewController: UIViewController, UITableViewDelegate, U
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
+        
         configureView()
         getRailStationDetails(stationCode: stationCode!)
+    }
+    
+    override func viewWillDisappear(animated: Bool) {
+        super.viewWillDisappear(animated)
+        imageViewHeightConstraint.constant = CGFloat(239)
     }
     
     // MARK: View Methods
     func configureView() {
         stationImage.image = UIImage(named: stationName!)
+        if stationImage.image == nil {
+            imageViewHeightConstraint.constant = CGFloat(0)
+        }
     }
     
     func addRefreshControl() {

@@ -152,7 +152,7 @@ class WMATAService {
             let destination = trainDetails["DestinationName"]!!.description
             let etaInMinutes = trainDetails["Min"]!!.description
             
-            if destination != "Train" || etaInMinutes == nil || etaInMinutes == ""{
+            if destination != "Train" && etaInMinutes != nil && etaInMinutes != ""{
                 let numOfCars = trainDetails["Car"]!!.description
                 let train = Train(numOfCars: numOfCars, destination: destination, etaInMinutes: etaInMinutes)
                 
