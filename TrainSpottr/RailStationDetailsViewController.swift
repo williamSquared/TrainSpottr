@@ -47,7 +47,6 @@ class RailStationDetailsViewController: UIViewController, UITableViewDelegate, U
     // MARK: View Methods
     func configureView() {
         stationImage.image = UIImage(named: stationName!)
-        stationImage.contentMode = .ScaleAspectFill
     }
 
     // MARK: TableView Methods
