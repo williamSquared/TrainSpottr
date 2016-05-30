@@ -60,9 +60,23 @@ class RailStationDetailsViewController: UIViewController, UITableViewDelegate, U
         
         let train = self.trains[indexPath.row]
         cell.textLabel?.text = train.destination
-        cell.detailTextLabel!.text = "\(train.etaInMinutes) minutes"
+        cell.detailTextLabel!.text = handleMinutes(eta: train.etaInMinutes)
         
         return cell
+    }
+    
+    private func handleMinutes(eta eta: String) -> String {
+        
+        switch eta {
+        case "BRD":
+            return "Boarding NOW"
+        case "ARR":
+            return "Arriving Soon"
+        case "---":
+            return ""
+        default:
+            return "\(eta) minutes"
+        }
     }
 }
     

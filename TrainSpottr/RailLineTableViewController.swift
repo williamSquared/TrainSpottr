@@ -63,7 +63,7 @@ class RailLineTableViewController: UITableViewController {
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if (segue.identifier == "RailLineToStation") {
+        if segue.identifier == "RailLineToStation" {
             let railStationTableViewController: RailStationTableViewController = segue.destinationViewController as! RailStationTableViewController
                         
             let railLine = railLines[(tableView.indexPathForSelectedRow?.row)!]

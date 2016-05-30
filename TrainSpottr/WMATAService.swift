@@ -112,7 +112,7 @@ class WMATAService {
     private class func processRailLines(json json: NSDictionary) -> [RailLine] {
         var railLines: [RailLine] = []
         
-        for (line) in json["Lines"] as! [AnyObject]{
+        for line in json["Lines"] as! [AnyObject]{
             let lineCode = line["LineCode"]!!.description
             let displayName = line["DisplayName"]!!.description
             let startStationCode = line["StartStationCode"]!!.description
@@ -129,7 +129,7 @@ class WMATAService {
     private class func processRailStations(json json: NSDictionary) -> [RailStation]{
         var railStations: [RailStation] = []
         
-        for (station) in json["Stations"] as! [AnyObject]{
+        for station in json["Stations"] as! [AnyObject]{
             let name = station["Name"]!!.description
             let street = station["Address"]!!["Street"]!!.description
             let city = station["Address"]!!["City"]!!.description
@@ -149,13 +149,15 @@ class WMATAService {
         var trains: [Train] = []
         
         for trainDetails in json["Trains"] as! [AnyObject]{
-            let numOfCars = trainDetails["Car"]!!.description
             let destination = trainDetails["DestinationName"]!!.description
             let etaInMinutes = trainDetails["Min"]!!.description
             
-            let train = Train(numOfCars: numOfCars, destination: destination, etaInMinutes: etaInMinutes)
-            
-            trains.append(train)
+            if destination != "Train" || etaInMinutes == nil {
+                let numOfCars = trainDetails["Car"]!!.description
+                let train = Train(numOfCars: numOfCars, destination: destination, etaInMinutes: etaInMinutes)
+                
+                trains.append(train)
+            }
         }
         
         return trains
