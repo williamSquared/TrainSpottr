@@ -64,4 +64,14 @@ class RailStationTableViewController: UITableViewController {
         cell.addressLineTwo.text = "\(railStation.city), \(railStation.state) \(railStation.zip)"
         return cell
     }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if (segue.identifier == "RaillStationToRailStationDetails") {
+            let railStationDetailsViewController: RailStationDetailsViewController = segue.destinationViewController as! RailStationDetailsViewController
+            
+            let railStation = railStations[(tableView.indexPathForSelectedRow?.row)!]
+            railStationDetailsViewController.stationName = railStation.name
+            railStationDetailsViewController.stationCode = railStation.stationCode
+        }
+    }
 }

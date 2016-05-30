@@ -10,4 +10,13 @@ import UIKit
 
 class RailStationDetails {
     
+    private(set) var numOfCars: String
+    private(set) var destination: String
+    private(set) var etaInMinutes: String
+    
+    init(numOfCars: String, destination: String, etaInMinutes: String) {
+        self.numOfCars = numOfCars
+        self.destination = destination
+        self.etaInMinutes = etaInMinutes
+    }
 }

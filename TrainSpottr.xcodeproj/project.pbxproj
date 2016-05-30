@@ -17,12 +17,11 @@
 		64D0755B1CFA76E70036875F /* RailStationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D0755A1CFA76E70036875F /* RailStationCell.swift */; };
 		64D0755D1CFBFBDD0036875F /* RailStationDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D0755C1CFBFBDD0036875F /* RailStationDetailsViewController.swift */; };
 		64D0755F1CFBFC100036875F /* RailStationDetailsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D0755E1CFBFC100036875F /* RailStationDetailsCell.swift */; };
-		64D075611CFBFCCE0036875F /* RailStationDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D075601CFBFCCE0036875F /* RailStationDetails.swift */; };
 		64D075671CFC78530036875F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D075621CFC78530036875F /* AppDelegate.swift */; };
 		64D075681CFC78530036875F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 64D075631CFC78530036875F /* Assets.xcassets */; };
-		64D075691CFC78530036875F /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 64D075641CFC78530036875F /* Info.plist */; };
 		64D0756A1CFC78530036875F /* keys.plist in Resources */ = {isa = PBXBuildFile; fileRef = 64D075651CFC78530036875F /* keys.plist */; };
 		64D0756B1CFC78530036875F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 64D075661CFC78530036875F /* LaunchScreen.storyboard */; };
+		64D075701CFC99010036875F /* RailStationDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D0756F1CFC99010036875F /* RailStationDetails.swift */; };
 		9FE185CB0226DC867DF48727 /* Pods_TrainSpottr.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33D19565DE4233FD70A9D719 /* Pods_TrainSpottr.framework */; };
 /* End PBXBuildFile section */
 
@@ -40,12 +39,12 @@
 		64D0755A1CFA76E70036875F /* RailStationCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RailStationCell.swift; sourceTree = "<group>"; };
 		64D0755C1CFBFBDD0036875F /* RailStationDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RailStationDetailsViewController.swift; sourceTree = "<group>"; };
 		64D0755E1CFBFC100036875F /* RailStationDetailsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RailStationDetailsCell.swift; sourceTree = "<group>"; };
-		64D075601CFBFCCE0036875F /* RailStationDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RailStationDetails.swift; sourceTree = "<group>"; };
 		64D075621CFC78530036875F /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		64D075631CFC78530036875F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		64D075641CFC78530036875F /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		64D075651CFC78530036875F /* keys.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = keys.plist; sourceTree = "<group>"; };
 		64D075661CFC78530036875F /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		64D0756F1CFC99010036875F /* RailStationDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RailStationDetails.swift; sourceTree = "<group>"; };
 		7B88B53DA5EF433DEC257EA8 /* Pods-TrainSpottr.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TrainSpottr.release.xcconfig"; path = "Pods/Target Support Files/Pods-TrainSpottr/Pods-TrainSpottr.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -126,7 +125,7 @@
 			children = (
 				644722281CF7CCF2001B7106 /* RailLine.swift */,
 				64D075581CFA5CF80036875F /* RailStation.swift */,
-				64D075601CFBFCCE0036875F /* RailStationDetails.swift */,
+				64D0756F1CFC99010036875F /* RailStationDetails.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -225,7 +224,6 @@
 				64D075681CFC78530036875F /* Assets.xcassets in Resources */,
 				644722181CF7CC8B001B7106 /* Main.storyboard in Resources */,
 				64D0756B1CFC78530036875F /* LaunchScreen.storyboard in Resources */,
-				64D075691CFC78530036875F /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -294,7 +292,7 @@
 				64D075571CFA5C3E0036875F /* RailStationTableViewController.swift in Sources */,
 				64D075591CFA5CF80036875F /* RailStation.swift in Sources */,
 				6447222B1CF7CD11001B7106 /* RailLineTableViewController.swift in Sources */,
-				64D075611CFBFCCE0036875F /* RailStationDetails.swift in Sources */,
+				64D075701CFC99010036875F /* RailStationDetails.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

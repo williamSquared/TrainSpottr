@@ -9,14 +9,15 @@
 import Foundation
 
 enum Path: String {
-    case RailLines = "jLines/"
-    case RailStations = "jStations"
+    case RailLines = "Rail.svc/json/jLines/"
+    case RailStations = "Rail.svc/json/jStations"
+    case RailStationDetails = "StationPrediction.svc/json/GetPrediction/"
 }
 
 class WMATAService {
     
     // MARK: Private Variables
-    private static let baseURLString = "https://api.wmata.com/Rail.svc/json/"
+    private static let baseURLString = "https://api.wmata.com/"
     private static let pList = NSBundle.mainBundle().pathForResource("keys", ofType: "plist")
     private static let plistContents = NSDictionary(contentsOfFile: pList!) as! [String: AnyObject]
     
@@ -26,7 +27,7 @@ class WMATAService {
      Returns a collection of RailLine's
      */
     class func getRailLines(completion completion: ((result: NSArray?) -> Void)!) {
-        let url = wmataURL(path: .RailLines, parameters: nil)
+        let url = wmataURL(path: .RailLines, parameters: nil, pathParameter: nil)
         _ = NSURLSession.sharedSession().dataTaskWithURL(url) {(data, response, error) in
             do {
                 if let jsonResult = try NSJSONSerialization.JSONObjectWithData(data!, options: []) as? NSDictionary {
@@ -43,7 +44,7 @@ class WMATAService {
      Returns a collection of RailStation's
      */
     class func getRailStations(lineCode lineCode: String, completion: ((result: NSArray?) -> Void)!) {
-        let url = wmataURL(path: .RailStations, parameters: ["LineCode": lineCode])
+        let url = wmataURL(path: .RailStations, parameters: ["LineCode": lineCode], pathParameter: nil)
         _ = NSURLSession.sharedSession().dataTaskWithURL(url) {(data, response, error) in
             do {
                 if let jsonResult = try NSJSONSerialization.JSONObjectWithData(data!, options: []) as? NSDictionary {
@@ -52,16 +53,39 @@ class WMATAService {
             } catch let error as NSError {
                 print(error.localizedDescription)
             }
-            }.resume()
+        }.resume()
+    }
+    
+    /*
+     Check WMATA for predicted train arrivals. Returns a collection of Arrival Times
+     */
+    class func getRailStationDetails(stationCode stationCode: String, completion: ((result: NSArray?) -> Void)!) {
+        var baseUrl = baseURLString
+        baseUrl.appendContentsOf(stationCode)
+        let url = wmataURL(path: .RailStationDetails, parameters: nil, pathParameter: stationCode)
+        _ = NSURLSession.sharedSession().dataTaskWithURL(url) {(data, response, error) in
+            do {
+                if let jsonResult = try NSJSONSerialization.JSONObjectWithData(data!, options: []) as? NSDictionary {
+                    print("\(jsonResult)")
+                    completion(result: processRailStationDetails(json: jsonResult))
+                }
+            } catch let error as NSError {
+                print(error.localizedDescription)
+            }
+        }.resume()
     }
     
     /*
      Input: enum Path
      Output: WMATA NSURL for use by network calls e.g. NSURLSession
     */
-    private class func wmataURL(path path: Path, parameters: [String:String]?) -> NSURL {
+    private class func wmataURL(path path: Path, parameters: [String:String]?, pathParameter: String?) -> NSURL {
         
-        let url = baseURLString.stringByAppendingString(path.rawValue)
+        var url = baseURLString.stringByAppendingString(path.rawValue)
+        if let pathParam = pathParameter {
+            url = url.stringByAppendingString(pathParam)
+        }
+        
         let components = NSURLComponents(string: url)
         var queryItems = [NSURLQueryItem]()
         
@@ -85,7 +109,7 @@ class WMATAService {
         return components!.URL!
     }
     
-    // MARK: Private Class Functions
+    // MARK: Private Class Helper Functions
     private class func processRailLines(json json: NSDictionary) -> [RailLine] {
         var railLines: [RailLine] = []
         
@@ -120,5 +144,11 @@ class WMATAService {
         }
         
         return railStations
+    }
+    
+    private class func processRailStationDetails(json json: NSDictionary) -> NSArray {
+        var station = []
+        
+        return station
     }
 }
