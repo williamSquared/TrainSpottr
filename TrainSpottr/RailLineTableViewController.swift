@@ -43,6 +43,7 @@ class RailLineTableViewController: UITableViewController {
     // MARK: TableView Methods
     func configureTableViewRows() {
         tableView.rowHeight = view.frame.height / 6.75
+        tableView.separatorStyle = .None
     }
     
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {

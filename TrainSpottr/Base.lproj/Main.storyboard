@@ -174,18 +174,18 @@
                                     <constraint firstAttribute="height" constant="239" id="AU1-Lz-Gwd"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Destination" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pki-Z4-uGt">
-                                <rect key="frame" x="20" y="311" width="156" height="36"/>
-                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="30"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8CF-Nq-K9X">
                                 <rect key="frame" x="0.0" y="354" width="600" height="2"/>
                                 <color key="backgroundColor" red="0.90823972225189209" green="0.92638683319091797" blue="0.9317171573638916" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ETA" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fBY-Ik-fdN">
                                 <rect key="frame" x="527" y="311" width="53" height="36"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="30"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Destination" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pki-Z4-uGt">
+                                <rect key="frame" x="17" y="311" width="156" height="36"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="30"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -206,7 +206,7 @@
                             <constraint firstItem="fBY-Ik-fdN" firstAttribute="top" secondItem="J3L-Gv-kgg" secondAttribute="bottom" constant="8" id="keu-nC-EZj"/>
                             <constraint firstItem="8CF-Nq-K9X" firstAttribute="top" secondItem="Pki-Z4-uGt" secondAttribute="bottom" constant="7" id="rBO-nD-A98"/>
                             <constraint firstItem="8CF-Nq-K9X" firstAttribute="trailing" secondItem="aM6-Rr-jEG" secondAttribute="trailing" id="tXV-QZ-fzJ"/>
-                            <constraint firstItem="Pki-Z4-uGt" firstAttribute="leading" secondItem="IKe-ak-LhO" secondAttribute="leadingMargin" id="xOc-l7-uu9"/>
+                            <constraint firstItem="Pki-Z4-uGt" firstAttribute="leading" secondItem="IKe-ak-LhO" secondAttribute="leadingMargin" constant="-3" id="xOc-l7-uu9"/>
                         </constraints>
                     </view>
                     <toolbarItems/>
