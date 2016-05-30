@@ -60,6 +60,11 @@ class RailLineTableViewController: UITableViewController {
         let railLine = railLines[indexPath.row]
         cell.railLineDisplayName.text = "\(railLine.displayName)"
         cell.backgroundColor = railLine.getColor()
+        
+        let colorView = UIView()
+        colorView.backgroundColor = railLine.getSelectedColor()
+        cell.selectedBackgroundView = colorView
+        
         return cell
     }
     

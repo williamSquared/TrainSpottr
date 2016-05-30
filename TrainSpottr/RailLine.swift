@@ -45,4 +45,22 @@ class RailLine {
         }
     }
     
+    func getSelectedColor() -> UIColor {
+        switch displayName {
+        case "Blue":
+            return UIColor.flatSkyBlueColorDark()
+        case "Green":
+            return UIColor.flatMintColorDark()
+        case "Orange":
+            return UIColor.flatOrangeColorDark()
+        case "Red":
+            return UIColor.flatRedColorDark()
+        case "Silver":
+            return UIColor.flatGrayColor()
+        case "Yellow":
+            return UIColor.flatYellowColorDark()
+        default:
+            return UIColor.clearColor()
+        }
+    }
 }
