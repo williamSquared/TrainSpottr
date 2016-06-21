@@ -24,6 +24,14 @@ class RailStationDetailsViewController: UIViewController, UITableViewDelegate, U
     
     // MARK: Lifecycle Methods
     override func viewDidLoad() {
+        
+        NSNotificationCenter.defaultCenter().addObserver(
+            self,
+            selector: #selector(applicationWillEnterForeground),
+            name: UIApplicationWillEnterForegroundNotification,
+            object: nil
+        )
+        
         navigationItem.title = "Station Details"
         railArrivalTableView.dataSource = self
         
@@ -55,6 +63,10 @@ class RailStationDetailsViewController: UIViewController, UITableViewDelegate, U
         refreshControl.attributedTitle = NSAttributedString(string: "Pull to refresh")
         refreshControl.addTarget(self, action: #selector(RailStationDetailsViewController.refresh), forControlEvents: .ValueChanged)
         railArrivalTableView.addSubview(refreshControl)
+    }
+    
+    func applicationWillEnterForeground() {
+        getRailStationDetails(stationCode: stationCode!)
     }
     
     // MARK: Network Call
