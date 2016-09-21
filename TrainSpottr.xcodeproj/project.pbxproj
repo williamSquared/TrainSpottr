@@ -162,12 +162,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 644722211CF7CC8B001B7106 /* Build configuration list for PBXNativeTarget "TrainSpottr" */;
 			buildPhases = (
-				AC7FFD7FB0DA0F29898DF561 /* 📦 Check Pods Manifest.lock */,
+				AC7FFD7FB0DA0F29898DF561 /* [CP] Check Pods Manifest.lock */,
 				6447220B1CF7CC8B001B7106 /* Sources */,
 				6447220C1CF7CC8B001B7106 /* Frameworks */,
 				6447220D1CF7CC8B001B7106 /* Resources */,
-				0377D07ACD813C47BA57DF80 /* 📦 Embed Pods Frameworks */,
-				FA79F33D98D1A997EDAF6471 /* 📦 Copy Pods Resources */,
+				0377D07ACD813C47BA57DF80 /* [CP] Embed Pods Frameworks */,
+				FA79F33D98D1A997EDAF6471 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -227,14 +227,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		0377D07ACD813C47BA57DF80 /* 📦 Embed Pods Frameworks */ = {
+		0377D07ACD813C47BA57DF80 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Embed Pods Frameworks";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -242,14 +242,14 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TrainSpottr/Pods-TrainSpottr-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		AC7FFD7FB0DA0F29898DF561 /* 📦 Check Pods Manifest.lock */ = {
+		AC7FFD7FB0DA0F29898DF561 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -257,14 +257,14 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		FA79F33D98D1A997EDAF6471 /* 📦 Copy Pods Resources */ = {
+		FA79F33D98D1A997EDAF6471 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -403,6 +403,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 2.3;
 			};
 			name = Debug;
 		};
@@ -419,6 +420,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.williamSquared.TrainSpottr;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_VERSION = 2.3;
 			};
 			name = Release;
 		};
